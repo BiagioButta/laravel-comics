@@ -1,6 +1,6 @@
-
-@extends('layouts.app')
-@section('content')
-<h1>video</h1>
-
-@endsection
+@extends('layout.app')
+@section('content') 
+<div class="container">
+    <h1>Videos</h1>
+ </div>
+ @endsection

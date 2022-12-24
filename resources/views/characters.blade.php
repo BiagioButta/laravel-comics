@@ -1,6 +1,6 @@
-
-@extends('layouts.app')
-@section('content')
-    <h1>personaggi</h1>
-
-@endsection
+@extends('layout.app')
+ @section('content')
+   <div class="container">
+      <h1>Characters</h1>
+   </div> 
+ @endsection

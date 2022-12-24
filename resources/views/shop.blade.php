@@ -1,6 +1,6 @@
-
-@extends('layouts.app')
-@section('content')
-<h1>shop</h1>
-
-@endsection
+@extends('layout.app')
+@section('content') 
+<div class="container">
+    <h1>Shop</h1>
+ </div>
+ @endsection

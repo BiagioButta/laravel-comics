@@ -1,7 +1,6 @@
-
-@extends('layouts.app')
-
-@section('content')
-<h1>collectibles</h1>
-
-@endsection
+@extends('layout.app')
+@section('content') 
+<div class="container">
+    <h1>Collectibles</h1>
+ </div>
+ @endsection

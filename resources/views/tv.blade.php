@@ -1,7 +1,6 @@
-@extends('layouts.app')
-@section('page-title', 'Tutti i prodotti - La Molisana')
-
-@section('content')
-   <h1>tv</h1>
-   
-@endsection
+@extends('layout.app')
+@section('content') 
+<div class="container">
+    <h1>Tv</h1>
+ </div>
+ @endsection

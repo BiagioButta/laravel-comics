@@ -1,28 +1,33 @@
-@extends('layouts.app')
-@section('content')
+@extends('layout.app')
+<?php 
+$linksImage = config('comicsdb.linksImage');
 
-    @include('partials.hero')
+?>
+@section('content')
     <div class="container">
         <div class="row row-cols-6">
-            @foreach ($comics as $comic)
-            <a class="nav-link {{Route::currentRouteName() == 'batman'}}" href="{{ route('batman') }}">
-                <div class="col">
-                    <div class="card" style="width: 12rem;">
-                        <img src="{{$comic['thumb']}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <p class="card-text">{{$comic['title']}}</p>
-                        </div>
+            @foreach ($comics as $key => $comic)
+                <div class="card">
+                    <img src="{{$comic['thumb']}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{$comic['series']}}</h5>
+                      <p class="card-text">{{$comic['price']}}</p>
+                      <a href="{{'/singlepage' . $key}}" class="btn btn-primary">More info</a>
                     </div>
-                </div>
-            </a>   
+                  </div>
             @endforeach
         </div>
-        <div class="row">
-            <div class="col">
-                <button>Load more</button>
+    </div>
+    <div class="bg-blue">
+        <div class="container">
+            <div class="row">
+                @foreach ($linksImage as $link)
+                <div class="col">
+                    <img src="{{Vite::asset('resources/img/' . $link['url'] )}}" alt="">
+                    <a href="">{{$link['text']}}</a>
+                </div>
+                @endforeach
             </div>
         </div>
     </div>
-    <div class="row">ciao</div>
-
 @endsection

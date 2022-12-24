@@ -1,16 +1,50 @@
+@use './variables' as *;
 @import '~bootstrap/scss/bootstrap';
-
-
-img {
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
     max-width: 100%;
 }
-a.active{
-    font-weight: bold;
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-.hero{
-    background-image: url(../img/jumbotron.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 400px;
+a{
+    text-decoration: none;
+    color: black;
 }
 
+.jumbo{
+    background-image: url('/resources/img/jumbotron.jpg');
+    background-size: cover;
+    height: 400px;
+    position: relative;
+    .title{
+        position: absolute;
+        bottom: 0px; 
+        transform: translate( 0, 50%);
+        padding: 0.8rem;
+        background-color: $blue;
+        
+    }
+}
+
+.bg-blue{
+    background-color: $blue;
+}
+
+// footer
+.bg-footer{
+    background-image: url('/resources/img/footer-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.bg-dark-grey{
+    background-color: $dark-grey;
+}
